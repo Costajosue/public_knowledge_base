@@ -3,7 +3,7 @@
 
 nome = str(input('Qual é seu nome? '))
 if nome == 'josue':
-    print('Bem vindo chefe! ')  
+    print('Bem vindo chefe! ') 
 print('tenha um otimo dia: {}'.format(nome))    
 
 # ESTRUTURA CONDICIONAL CONPOSTA: 
