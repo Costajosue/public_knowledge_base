@@ -1,17 +1,12 @@
-# Curso em Video - Mundo I
+# Curso em Video - Mundo II
 
 ### Descrição: 
 
 copiar descrição que ja existe no readme.md do repositorio geral Python
 
-# - Mundo I : 
-- Introdução ao Mundo da Programação
-- Primeiros passos com o Python.
-- Tratando dados e fazendo contas.
-- Usando módulos do Python.
-- Condições em Python (if..else).
-- Adicionando cores ao Python.
-
+- Condições em Python (if..elif)
+- Repetições em Python (for)
+- Repetições em Python (while)
 
 ### Aulas:
 

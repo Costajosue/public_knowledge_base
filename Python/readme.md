@@ -1,32 +1,13 @@
-# Python studies📕
+# Python Studies📕
 
-## motivation:
+## Motivation :
 
 This repository was created with the intention of showing my development and learning with the Python language. That I got through courses and reading documentation.
 
-## Descrição: 
+## Description: 
 
 Here are some of the courses I took:
 
-## Curso em video - Python 3:
-# - Mundo I : 
-- Introdução ao Mundo da Programação
-- Primeiros passos com o Python.
-- Tratando dados e fazendo contas.
-- Usando módulos do Python.
-- Condições em Python (if..else).
-- Adicionando cores ao Python.
+* **[Curso Em Video - Mundo I](https://github.com/Costajosue/public_knowledge_base/tree/main/Python/Curso%20em%20video%20-%20Mundo%20I)**
 
-# - Mundo II :
-- Condições em Python (if..elif)
-- Repetições em Python (for)
-- Repetições em Python (while)
-
-# - Mundo III :
-- Tuplas em Python
-- Listas em Python
-- Dicionários em Python
-- Funções em Python
-- Modularização em Python
-- Tratamento de Erros em Python
-
+* **[Curso Em Video - Mundo II](https://github.com/Costajosue/public_knowledge_base/tree/main/Python/Curso%20em%20video%20-%20Mundo%20II)**
