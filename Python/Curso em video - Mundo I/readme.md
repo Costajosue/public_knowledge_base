@@ -1,6 +1,6 @@
 # Curso em Video - Mundo I
 
-###description : 
+###d escription : 
 
 Course First World introduces the language, its concepts and teaches some basic features.
 
