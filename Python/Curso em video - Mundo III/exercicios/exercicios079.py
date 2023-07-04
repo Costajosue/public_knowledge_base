@@ -2,16 +2,16 @@
 #  Caso o número já exista lá dentro, ele não será adicionado. No final, serão exibidos todos os valores únicos digitados, 
 #  em ordem crescente.
 
-números = list()
+lista = []
 while True:
-    n = int(input('Digite um número:'))
-    if n not in números:
-        números.append(n)
-        print('registrado')
-    else:
-        print('Não registrado')
-    r = str(input('quer continuar? [N\S]'))
-    if r in 'Nn':
+    n = int(input('Digite um número: '))
+    if n not in lista:
+        lista.append(n)
+        print(f'o número {n}, foi cadastrado com sucesso!')
+    else: 
+        print(f'Valor {n} já foi adicionado ')
+    resp = str(input('Deseja continuar? [S/N] '))
+    if resp in 'Nn':  
+        print(f'Você digitou os valores:\n {sorted(lista)}')
         break
-números.sort()
-print(f'Vc digitou {números}')
+        

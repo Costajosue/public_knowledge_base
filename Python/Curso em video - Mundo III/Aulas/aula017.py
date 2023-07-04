@@ -28,7 +28,7 @@
 num = [2, 5, 9, 1]
 num[2] = 3    # -> para mudar na lista 
 num.append(7) # -> para add na lista
-# num.sort()   -> psra organizar a lista
+# num.sort()   -> para organizar a lista
 num.sort(revarse=True) # -> outro metodo para organizar
 num.insert(2, 2) # -> add valores em um ponto expecifico 
 # num.pop(2) # -> para eliminar elemento ou vc pode usar o 
