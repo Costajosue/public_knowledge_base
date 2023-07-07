@@ -1,23 +1,23 @@
-# teste = list()
-# teste.append('Josue')
-# teste.append('18')
-# galera = list()
-# galera.append(teste[:]) -> [:] é utilizado para fezer uma copia...
-# teste[0] = 'leandro'
-# teste[1] = 22
-# galera.append(teste[:])
-# print(galera)
+teste = list()
+teste.append('Josue')
+teste.append('18')
+galera = list()
+galera.append(teste[:]) # -> [:] é utilizado para fezer uma copia...
+teste[0] = 'leandro'
+teste[1] = 22
+galera.append(teste[:])
+print(galera)
 
 #      Outra Forma de declarar :
 
-# galera = [['Josue', 18],['leandro', 22],['Maria', 19],['Yasmin', 34]]
-# print(galera[0] [1])
+ galera = [['Josue', 18],['leandro', 22],['Maria', 19],['Yasmin', 34]]
+ print(galera[0] [1])
 
 #------------------------------------------------------------------------
 
-# galera = [['Josue', 18],['leandro', 22],['Maria', 19],['Yasmin', 34]]
-# for p in galera:
-#    print(f'{p[0]} tem {p[1]} anos de idade.')
+ galera = [['Josue', 18],['leandro', 22],['Maria', 19],['Yasmin', 34]]
+ for p in galera:
+    print(f'{p[0]} tem {p[1]} anos de idade.')
 
 #------------------------------------------------------------------------
 
