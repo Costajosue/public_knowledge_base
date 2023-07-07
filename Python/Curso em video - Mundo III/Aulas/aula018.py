@@ -10,8 +10,8 @@ print(galera)
 
 #      Outra Forma de declarar :
 
- galera = [['Josue', 18],['leandro', 22],['Maria', 19],['Yasmin', 34]]
- print(galera[0] [1])
+galera = [['Josue', 18],['leandro', 22],['Maria', 19],['Yasmin', 34]]
+print(galera[0] [1])
 
 #------------------------------------------------------------------------
 
