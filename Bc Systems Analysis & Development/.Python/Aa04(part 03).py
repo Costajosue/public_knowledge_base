@@ -5,9 +5,13 @@ dados = {
 'Y1': [120,110,130,145,118,125],
 'Y2': [95,54,86,77,90,81]
 }
+
+
+
 df = pd.DataFrame(data=dados)# transformando em uma DataFrame
 # print(df)
 # Criando um gráfico
+
 plt.plot(df) 
 # Atribuindo um título ao gráfico
 plt.title('Exemplo utilizando Atividade 04')
