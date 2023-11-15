@@ -8,3 +8,4 @@ except urllib.error.URLError:
 else:
     print('Consegui acessar o site pudim com sucesso!')
     print(site.read())
+    
