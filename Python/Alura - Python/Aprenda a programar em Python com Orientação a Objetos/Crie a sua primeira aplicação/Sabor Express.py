@@ -1,7 +1,7 @@
 # Importando biblioteca 'OS' que nesse caso vamos utilizar para curtomizar nosso def finalizar_app(): para limpar o terminal quando optarmos pela opção de finaliza o programa\sair mostrar somente 'Finalizando programa' .
 import os
 
-restaurantes =[] # criando uma lista onde vamos armazenar os dados.
+restaurantes =['Pizza', 'sushi'] # criando uma lista onde vamos armazenar os dados.
 
 def exibir_nome_do_programa():
     print("""
@@ -23,25 +23,34 @@ def exibir_opçoes(): # Criando menu do projeto:
 
 # Definindo uma função finalizar_app() para finalizar o programa na linha 34, e assim deixar o codigo mais limpo.
 def finalizar_app():
-    os.system('cls') # Utilizando biblioteca os para limpar terminal e mostrar somente 'Finalizando programa'
-    print('Finalizando o App\n')
+    exibir_subtitulo('Finalizar App')
 
+def voltar_ao_menu_principal():
+        input('\nDigite uma tecla para voltar ao menu inicial ')
+        main() #chamando função main 
 
 def opcao_invalida(): #caso o usuario não digite uma das opções ja determinadas
     print('Opção invalida!\n')
-    input('Digite uma tecla para voltar ao menu inicial')
-    main() #chamando função main 
+    voltar_ao_menu_principal()
 
+def exibir_subtitulo(texto): # com essa função vamos otimizar o codigo ao exibir subtitulos nas outras funções.
+    os.system('cls')
+    print(texto)
 
 def cadastrar_novo_restaurante(): #Função que ira cadastrar os restaurantes;
-    os.system('cls')
-    print('Cadastro de novos restaurantes\n')
+    exibir_subtitulo('Cadastro de novos restaurantes ')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     restaurantes.append(nome_do_restaurante)# adicionando string e dados na lista.
     print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!\n')
-    input('Digite uma tecla para voltar ao menu principal')
-    main()
+    voltar_ao_menu_principal()
 
+
+def listar_restaurantes(): # função que ira listar os restaurantes
+    exibir_subtitulo('Listando restaurantes')
+
+    for restaurante in restaurantes: # significa 'Para cada restaurante em restaurentes'
+        print(f'.{restaurante}')
+    voltar_ao_menu_principal()
 
 def escolher_opcao():# Deixando o menu funcional armarzenando o input em uma variavel e logo após mestramos o resultado com o print:
     try: # significa (tente) tente executar isso:
@@ -52,7 +61,7 @@ def escolher_opcao():# Deixando o menu funcional armarzenando o input em uma var
         if opcao_escolhida == 1:
             cadastrar_novo_restaurante()
         elif opcao_escolhida == 2:
-            print('Listar restaurantes')
+            listar_restaurantes()
         elif opcao_escolhida == 3:
             print('Ativar restaurantes')
         elif opcao_escolhida == 4:
