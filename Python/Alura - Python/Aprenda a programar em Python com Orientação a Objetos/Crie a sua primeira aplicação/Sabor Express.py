@@ -1,14 +1,16 @@
 # Importando biblioteca 'OS' que nesse caso vamos utilizar para curtomizar nosso def finalizar_app(): para limpar o terminal quando optarmos pela opção de finaliza o programa\sair mostrar somente 'Finalizando programa' .
 import os
 
-restaurantes =['Pizza', 'sushi'] # criando uma lista onde vamos armazenar os dados.
+restaurantes =[{'nome':'Praça', 'categoria':'Japonesa', 'ativo':False}, 
+               {'nome':'Pizza Suprema', 'categoria':'Brasileiro', 'ativo':True}, 
+               {'nome':'Cantina', 'categoria':'Italiano', 'ativo':False}] # criando uma Dicionario onde vamos armazenar os dados.
 
 def exibir_nome_do_programa():
     print("""
     ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
     ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
     ╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
-    ░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
+    ░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗2
     ██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
     ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░  
     """)
@@ -17,7 +19,7 @@ def exibir_opçoes(): # Criando menu do projeto:
     # Criando menu do projeto:
     print('1. Cadastrar restaurante')
     print('2. Listar restaurantes')
-    print('3. Ativar restaurantes')
+    print('3. Alternar estado do restaurantes')
     print('4. Sair\n')
 
 
@@ -35,12 +37,18 @@ def opcao_invalida(): #caso o usuario não digite uma das opções ja determinad
 
 def exibir_subtitulo(texto): # com essa função vamos otimizar o codigo ao exibir subtitulos nas outras funções.
     os.system('cls')
+    linha = '*' * (len(texto))
+    print(linha)
     print(texto)
+    print(linha)
+    print()
 
 def cadastrar_novo_restaurante(): #Função que ira cadastrar os restaurantes;
     exibir_subtitulo('Cadastro de novos restaurantes ')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
-    restaurantes.append(nome_do_restaurante)# adicionando string e dados na lista.
+    categoria = input(f'Digite a categoria do restaurante {nome_do_restaurante}: ')
+    dados_do_restaurante = {'nome': nome_do_restaurante, 'categoria':categoria, 'ativo':False}# criando dicionario
+    restaurantes.append(dados_do_restaurante) # adicionando ao dicionario principal
     print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!\n')
     voltar_ao_menu_principal()
 
@@ -48,8 +56,31 @@ def cadastrar_novo_restaurante(): #Função que ira cadastrar os restaurantes;
 def listar_restaurantes(): # função que ira listar os restaurantes
     exibir_subtitulo('Listando restaurantes')
 
+  
+    print(f'{"Nome do restaurante".ljust(22)} | {"Categoria".ljust(20)} | Status')
     for restaurante in restaurantes: # significa 'Para cada restaurante em restaurentes'
-        print(f'.{restaurante}')
+        nome_restaurante = restaurante['nome']
+        categoria = restaurante['categoria']
+        ativo = 'ativado' if restaurante['ativo'] else 'desativado' # utilizando ternario
+        print(f'- {nome_restaurante.ljust(20)} | {categoria.ljust(20)} | {ativo}') # .ljust(20) para dar espaços entre as informações
+    voltar_ao_menu_principal()
+
+
+def alternar_estado_restaurante(): #Função para Ativar e Desativar restaurante
+    exibir_subtitulo('Alternado estado do restaurante')
+    nome_restaurante = input('Digite o nome do restaurante que deseja alternar o estado: ')
+    restaurante_encontrado = False
+
+    for restaurante in restaurantes:
+        if nome_restaurante == restaurante['nome']:# se o restaurante digitado estiver dentro do dicionario:
+            restaurante_encontrado = True
+            restaurante['ativo'] = not restaurante['ativo'] # se restaurante estiver ativo ele desativara pois e 'not' ira inverter sua condição 
+           # utilizando metodo Ternario:
+            mensagem = f'O restaurante {nome_restaurante} foi ativado com sucesso' if restaurante['ativo'] else f'O restaurante {nome_restaurante} foi desativado com sucesso'
+            print(mensagem)
+    if not restaurante_encontrado:
+        print('O restaurante não foi encontrado')
+
     voltar_ao_menu_principal()
 
 def escolher_opcao():# Deixando o menu funcional armarzenando o input em uma variavel e logo após mestramos o resultado com o print:
@@ -63,7 +94,7 @@ def escolher_opcao():# Deixando o menu funcional armarzenando o input em uma var
         elif opcao_escolhida == 2:
             listar_restaurantes()
         elif opcao_escolhida == 3:
-            print('Ativar restaurantes')
+            alternar_estado_restaurante()
         elif opcao_escolhida == 4:
             finalizar_app()
         else:
@@ -79,4 +110,4 @@ def main():# função para limpar ou voltar para o menu de interação;
     escolher_opcao()
 
 if __name__ == '__main__':
-    main()
+    main() 
