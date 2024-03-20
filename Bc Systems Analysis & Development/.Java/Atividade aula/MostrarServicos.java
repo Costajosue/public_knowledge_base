@@ -9,8 +9,10 @@ public class MostrarServicos {
 
         for (int i = 0; i < 5; i++){
             precoMaior[i] = new Servicos();
-            precoMaior[i].setTpServico(JOptionPane.showInputDialog(null, "Informe o" + precoMaior[i].getld() + "Serviço a ser cadastrado"));
+            precoMaior[i].setTpServico(JOptionPane.showInputDialog(null, "Informe o " + precoMaior[i].getld() + " Serviço a ser cadastrado"));
             precoMaior[i].setPreco(Double.parseDouble(JOptionPane.showInputDialog(null,"informe o preço do " + precoMaior[i].getld()+"serviço: ")));
         }
+    System.out.println(exibeMetodos);
+
     }
 }

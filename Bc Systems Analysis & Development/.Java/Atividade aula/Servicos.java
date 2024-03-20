@@ -1,5 +1,6 @@
 import java.util.Iterator;
 
+@SuppressWarnings("unused")
 public class Servicos {
     //Encapsulamento dos atributos
     private int id;

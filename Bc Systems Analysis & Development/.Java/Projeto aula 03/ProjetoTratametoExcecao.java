@@ -1,5 +1,6 @@
 public class ProjetoTratametoExcecao {
 
+    @SuppressWarnings("static-access")
     public static void main(String[] args) {
         
         /* 

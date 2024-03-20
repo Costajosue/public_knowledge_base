@@ -4,7 +4,7 @@ public class Colaborador {
  * @param args
  */
 public static void main(String[] args) {
- // TODO code application logic here
+ // TODA LOGICA DO CODIGO ESTA AQUI
 
  Scanner ler = new Scanner(System.in);
  Gerente gerente = new Gerente();
@@ -31,5 +31,6 @@ public static void main(String[] args) {
  System.out.println("CPF: "+ adm.CPF);
  System.out.println("Nome: "+ adm.funcao);
  adm.comer(); 
-
- }
+ler.close();
+}
+}
