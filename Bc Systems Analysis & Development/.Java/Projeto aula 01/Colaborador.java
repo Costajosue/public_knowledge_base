@@ -30,4 +30,3 @@ public class Colaborador {
  adm.comer();
 
  }
-}
