@@ -1,6 +1,9 @@
 import java.util.Scanner;
 public class Colaborador {
- public static void main(String[] args) {
+ /**
+ * @param args
+ */
+public static void main(String[] args) {
  // TODO code application logic here
 
  Scanner ler = new Scanner(System.in);
@@ -27,6 +30,6 @@ public class Colaborador {
  System.out.println("Nome: "+ adm.nome);
  System.out.println("CPF: "+ adm.CPF);
  System.out.println("Nome: "+ adm.funcao);
- adm.comer();
+ adm.comer(); 
 
  }
