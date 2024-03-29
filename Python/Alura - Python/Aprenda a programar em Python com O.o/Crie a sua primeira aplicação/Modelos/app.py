@@ -6,7 +6,7 @@ restaurante_praca = Restaurante('praca', 'Gourmet')
 restaurante_mexicano = Restaurante('Mexican Food', 'Mexicana')
 restaurante_japones = Restaurante('Japa', 'Japonesa')
 
-restaurante_mexicano.alternar_estado() # utilizando função que importamos para ativar restalrante; 
+restaurante_mexicano.alternar_estado() # utilizando função que importamos para ativar restaurante; 
 
 def main(): # Função onde pedimos para exibir todos os restaurantes;
     Restaurante.listar_restalrantes()
