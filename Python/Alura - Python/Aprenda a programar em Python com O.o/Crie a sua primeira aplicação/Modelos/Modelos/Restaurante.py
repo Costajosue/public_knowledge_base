@@ -1,3 +1,6 @@
+# Uma classe tambem pode importar outras classes:
+from Modelos.avaliacão  import Avaliacão
+
 
 class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de uma classe '
     restaurantes = []
@@ -7,6 +10,7 @@ class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de um
         self._nome = nome.title()
         self._categoria = categoria.upper()
         self._ativo = False
+        self._avaliacão = []
         Restaurante.restaurantes.append(self)
     
 
@@ -25,3 +29,9 @@ class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de um
     # Criando metodo para alternar estado de "ATIVO\DESATIVADO"
     def alternar_estado(self):
         self._ativo = not self._ativo
+
+    
+    #criando um metodo que ira passar as imformções e receber as avaliações:
+    def receber_avaliação(self, cliente, nota):
+        avaliacão = Avaliacão(cliente, nota)
+        self._avaliacão.append(avaliacão)
