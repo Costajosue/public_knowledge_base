@@ -12,4 +12,4 @@ def main(): # Função onde pedimos para exibir todos os restaurantes;
     Restaurante.listar_restalrantes()
 
 if __name__ == '__main__': # Definindo como nosso programa principal.
-    main()
+    main() 
