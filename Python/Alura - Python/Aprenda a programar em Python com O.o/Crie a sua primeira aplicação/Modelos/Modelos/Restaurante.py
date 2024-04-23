@@ -34,8 +34,9 @@ class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de um
     
     #criando um metodo que ira passar as imformções e receber as avaliações:
     def receber_avaliação(self, cliente, nota):
-        avaliacão = Avaliacão(cliente, nota)
-        self._avaliacão.append(avaliacão)
+        if 0 < nota <= 5:
+            avaliacão = Avaliacão(cliente, nota)
+            self._avaliacão.append(avaliacão)
 
 
     @property
@@ -47,7 +48,7 @@ class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de um
     # round = aredondar os numeros e manter a ordem decimal
     def media_avaliacões(self):
         if not self._avaliacão:
-            return 0
+            return '-'
         # Calculo das medias:
         soma_das_notas = sum(Avaliacão._nota for Avaliacão in self._avaliacão)
         quantidade_de_notas = len(self._avaliacão)
