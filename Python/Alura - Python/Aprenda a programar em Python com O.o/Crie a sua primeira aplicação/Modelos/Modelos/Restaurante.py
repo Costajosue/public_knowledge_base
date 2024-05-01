@@ -11,6 +11,7 @@ class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de um
         self._categoria = categoria.upper()
         self._ativo = False
         self._avaliacão = []
+        self._cardapio = []
         Restaurante.restaurantes.append(self)
     
 
@@ -55,3 +56,12 @@ class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de um
         media = round (soma_das_notas / quantidade_de_notas, 1)
         return media
     
+
+    # criando metodo para adicionar as bebidas no cardapio
+    def adicionar_bebida_no_cardapio(self,bebida):
+        self._cardapio.append(bebida)
+
+
+    # criando metodo para adicionar os pratos no cardapio
+    def adicionar_prato_no_cardapio(self,prato):
+        self._cardapio.append(prato)
