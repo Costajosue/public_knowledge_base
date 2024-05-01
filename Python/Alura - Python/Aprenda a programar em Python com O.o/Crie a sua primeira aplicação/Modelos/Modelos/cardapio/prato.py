@@ -7,7 +7,7 @@ class Prato(ItemCardapio):
         super().__init__(nome,preco) # Super = utilizamos para acessar as informções de outra classe.
         
         # como herdamos 'nome' e 'preço' da classe cardapio, vamos apenas criar a descrição.
-        self._descricao = descricao
+        self.descricao = descricao
 
     #Criar uma representação de texto do Objeto:
     def __str__(self):
