@@ -9,7 +9,6 @@ class Prato(ItemCardapio):
         # como herdamos 'nome' e 'preço' da classe cardapio, vamos apenas criar a descrição.
         self._descricao = descricao
 
-
     #Criar uma representação de texto do Objeto:
     def __str__(self):
         return self._nome

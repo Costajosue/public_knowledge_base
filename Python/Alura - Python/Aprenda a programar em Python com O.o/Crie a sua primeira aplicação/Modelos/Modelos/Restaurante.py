@@ -1,6 +1,6 @@
 # Uma classe tambem pode importar outras classes:
 from Modelos.avaliacão import Avaliacão
-
+from Modelos.cardapio.item_cardapio import ItemCardapio
 
 class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de uma classe '
     restaurantes = []
@@ -56,12 +56,15 @@ class Restaurante:# Criando uma classe no python , ' Objeto é a instancia de um
         media = round (soma_das_notas / quantidade_de_notas, 1)
         return media
     
+    def adicionar_no_cardapio(self,item): 
+        if isinstance(item,ItemCardapio): #utilizando o isinstance pois ele comprara o que tem nem comum...
+            self._cardapio.append(item)
 
-    # criando metodo para adicionar as bebidas no cardapio
-    def adicionar_bebida_no_cardapio(self,bebida):
-        self._cardapio.append(bebida)
 
-
-    # criando metodo para adicionar os pratos no cardapio
-    def adicionar_prato_no_cardapio(self,prato):
-        self._cardapio.append(prato)
+    @property
+    # Medoto para exibir o cardapio:
+    def exibir_cardapio(self):
+        print(f'Cardapio do restaurante {self._nome}')
+        for i,item in enumerate(self._cardapio,start=1):
+            mensagem = f'{i}. Nome: {item._nome} | Preço: R${item._preco}'
+            print(mensagem)
