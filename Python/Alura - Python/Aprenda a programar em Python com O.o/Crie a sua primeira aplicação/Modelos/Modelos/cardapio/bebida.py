@@ -8,3 +8,6 @@ class Bebida(ItemCardapio):
     #Criar uma representação de texto do Objeto:
     def __str__(self):
         return self._nome
+    
+    def aplicar_desconto(self):
+        self._preco -= (self._preco * 0.08)
