@@ -1,13 +1,22 @@
-# Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given  scores. Store them in a list and find the score of the runner-up.
-# Input Format
-# The first line contains . The second line contains an array   of  integers each separated by a space.
-# Constraints
-# Output Format
-# Print the runner-up score.
-# Sample Input 0
-# 5
+# Dada a planilha de pontuação dos participantes para o Dia do Esporte Universitário, você deverá encontrar a pontuação do 
+# segundo colocado. Você é dado pontuações. Armazene-os em uma lista e descubra a pontuação do vice-campeão.
+# 
+# Formato de entrada
+# A primeira linha contém. A segunda linha contém uma matriz deinteiros, cada um separado por um espaço.
+
+# Restrições
+
+# Formato de saída
+
+# Imprima a pontuação do segundo colocado.
+
+# Exemplo de entrada 0
+
+# 5 
 # 2 3 6 6 5
-# Sample Output 0
+# Exemplo de saída 0
+
 # 5
-# Explanation 0
-# Given list is . The maximum score is , second maximum is . Hence, we print  as the runner-up score.
+# Explicação 0
+
+# A lista dada é. A pontuação máxima é, o segundo máximo é. Portanto, imprimimoscomo pontuação do vice-campeão.s
