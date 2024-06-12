@@ -65,4 +65,6 @@ for _ in range(int(input(f'Digite a quantidade de alunos(max: 5 alunos): '))): #
         nome = str(input(f'Digite o nome do aluno: '))
         nota = float(input(f'Por favor digite a nota do aluno: '))
         estudantes.append([nome, nota]) # Armezenar na lista estudantes as informações dos alunos e notas dos estudantes
-print(estudantes)
+# print(sorted(estudantes))
+notas = sorted(set(nota for nome, nota in estudantes)) # criando uma nova lista com o sorted organizando em ordem alfabetica, utilizando o set para eliminar possiveis notas duplicadas 
+print(sorted(nome for nome, nota in estudantes if nota == notas[1])) # imprimir o nome para cada nome e nota em estudante imprima a nota na possição 2 da lista notas
