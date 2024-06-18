@@ -1,22 +1,30 @@
-# Dada a planilha de pontuação dos participantes para o Dia do Esporte Universitário, você deverá encontrar a pontuação do 
-# segundo colocado. Você é dado pontuações. Armazene-os em uma lista e descubra a pontuação do vice-campeão.
-# 
-# Formato de entrada
-# A primeira linha contém. A segunda linha contém uma matriz deinteiros, cada um separado por um espaço.
+# if __name__ == '__main__':
+#     n = int(input())
+#     arr = map(int, input().split())
 
-# Restrições
+N=0
+p=0
+resultado=0
+pontuacoes=[]
 
-# Formato de saída
+while(N<2 or N>10):
+	N=int(input())
 
-# Imprima a pontuação do segundo colocado.
+for i in range(N-1):
+	while(p<-100 or p>100):
+		p=int(input())
+	pontuacoes.append(p)
+	
+pontuacoes = pontuacoes.sort()
 
-# Exemplo de entrada 0
-
-# 5 
-# 2 3 6 6 5
-# Exemplo de saída 0
-
-# 5
-# Explicação 0
-
-# A lista dada é. A pontuação máxima é, o segundo máximo é. Portanto, imprimimoscomo pontuação do vice-campeão.s
+second_index= 0
+for i in range(0,N):
+	first_index = pontuacoes.index(max(pontuacoes))
+	second_index = first =-1
+	first = pontuacoes[first_index]
+	second = pontuacoes[second_index]
+		
+	if second < first:
+		resultado=second
+		break
+	
