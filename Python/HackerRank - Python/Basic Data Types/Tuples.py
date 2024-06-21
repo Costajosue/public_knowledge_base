@@ -1,9 +1,11 @@
-if __name__ == "__main__":
 
-    n = int(input())  # Ler o número de elementos na tupla
-    numeros = (input().split())  # Ler os inteiros separados por espaços utilizando o split() para separalos
-    
-    # criar a tupla, como queremos umatupla de inteiros, vou utilizar o função map para percorre a lista e transformar possiveis numeros em inteiros
-    t = tuple(map(numeros))
+n = int(input())  # Ler o número de elementos na tupla
 
-print(t)
+# Ler os inteiros separados por espaços utilizando o split() para separar estou utilizando a função map() para que 
+# Dentro da minha tupla todos os input() sejar transformados em um numero inteiro.
+t = tuple(map(int, input().split())) 
+
+# Calculando a hash
+hash_n = hash(t)
+
+print(hash_n)
