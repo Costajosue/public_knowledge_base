@@ -15,7 +15,9 @@ if __name__ == '__main__':
     media = sum(alunos_notas) / len(alunos_notas)
     resultado = "{:.2f}".format(media)
 
+    # print(resultado)
     print(resultado)
+
 
 
 # Documentoção lidas para resolver:
