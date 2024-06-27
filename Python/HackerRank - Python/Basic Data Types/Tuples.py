@@ -17,4 +17,3 @@ t = (map(int, input().split()))
 t2 = tuple(t)
 
 print(hash(t2))
-# print(hash(t2))
