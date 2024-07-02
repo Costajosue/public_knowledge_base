@@ -5,6 +5,7 @@ if __name__ == '__main__':
     s = input() # input para digitar a frase.
     result = swap_case(s)
     print(result)
+        #print(result)
 
 
 # EXPLICAÇÃO DA FUNÇÃO: swap_case()
