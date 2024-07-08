@@ -4,6 +4,7 @@ def swap_case(s): # criando uma função def
 if __name__ == '__main__':
     s = input() # input para digitar a frase.
     result = swap_case(s)
+    #lt = swap_case(s)
     print(result)
         #print(result)
 
