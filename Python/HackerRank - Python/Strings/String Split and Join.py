@@ -1,8 +1,7 @@
-def split_and_join(line):
-    r = 0
-    r = '-'.join(result)
-    print(r)
-    
+def split_and_join(string):
+    r = string.split()
+    joined_string = "-".join(r)
+    return joined_string
 
     if __name__ == '__main__':
         line = input()
